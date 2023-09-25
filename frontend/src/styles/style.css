@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mooli&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 300px;
+    border-radius: 0.75rem;
+    background-image: linear-gradient(to right,hotpink,yellow);
+    padding: 2rem;
+    color: #00264D;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  
+  .form {
+    margin-top: 1.5rem;
+  }
+  
+  .input-group {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .input-group label {
+    display: block;
+    color: #00264D;
+    margin-bottom: 4px;
+  }
+  
+  .input-group input,textarea {
+    width: 85%;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    outline: 0;
+    background-color: rgba(17, 24, 39, 1);
+    padding: 0.75rem 1rem;
+    /* color: rgba(243, 244, 246, 1); */
+    background: -webkit-linear-gradient(#00172D, cornflowerblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .input-group input:focus {
+    border-color: rgba(167, 139, 250);
+  }
+  
+  .forgot {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(156, 163, 175,1);
+    margin: 8px 0 14px 0;
+  }
+  
+  .forgot a,.signup a {
+    color: rgba(243, 244, 246, 1);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot a:hover, .signup a:hover {
+    text-decoration: underline rgba(167, 139, 250, 1);
+  }
+  
+  .sign {
+    display: block;
+    width: 100%;
+    background-color: #00172D;
+    padding: 0.75rem;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .sign:hover
+  {
+    background-color: #02386E;
+  }
+  
+  .social-message {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(55, 65, 81, 1);
+  }
+  
+  .social-message .message {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgba(156, 163, 175, 1);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+  }
+  
+  .social-icons .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #fff;
+  }
+  
+  .signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #00172D;
+  }
+
+  .login-container
+  {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#00172D,#00264D,#02386E);
+  }
+
+  
+  .message
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .title-container
+  {
+    border-radius: 5px;
+    background: #3c71ec;
+    box-shadow: inset 28px 28px 70px #203c7d,
+    inset -28px -28px 70px #58a6ff;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-family: 'monospace', sans-serif;
+  }
+
+  .description-container
+  {
+    color: white;
+    font-family: 'Mooli', sans-serif;
+    border-radius: 0px;
+    background: #496097;
+    box-shadow: inset 28px 28px 70px #273350,
+    inset -28px -28px 70px #6b8dde;
+    width: 500px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+
+  .overall-todo
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .functionality
+  {
+    border-radius: 5px;
+    background: #496097;
+    box-shadow: inset 28px 28px 70px #273350,
+    inset -28px -28px 70px #6b8dde;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  .functionality button
+  {
+    border: none;
+    padding: 5px 30px 5px 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: 1s;
+  }
+
+  .functionality button:hover
+  {
+    background-color: white;
+    color: black;
+    transform: 1s;
+  }
+
+  .view-container
+  {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(#00172D,#00264D,#02386E);
+    color: white;
+  }
+
+  .add-btn
+  {
+    color: white;
+    position: absolute;
+    transform: translate(0px,300px);
+    font-size: 30px;
+    padding: 10px;
+  }
