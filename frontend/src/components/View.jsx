@@ -16,7 +16,7 @@ const View = () => {
     let x = async () => {
     let token = localStorage.getItem('token')
     try{
-    let response = await fetch('http://localhost:4500/getall',{
+    let response = await fetch('http://localhost:4500/getByUsername',{
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
@@ -24,8 +24,10 @@ const View = () => {
       }
     });
     let data = await response.json();
-    setArray(data);
-    console.log(array);
+    console.log(data.data);
+    setArray(data.data);
+    console.log(array.length);
+    console.log(typeof array);
     }catch(error)
     {
       console.log(error)

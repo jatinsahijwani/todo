@@ -20,7 +20,8 @@ const userSchema = new mongoose.Schema({
 
 const todoSchema = new mongoose.Schema({
     title: String,
-    description: String
+    description: String,
+    username: String
 });
 
 const User = mongoose.model('User550',userSchema);
@@ -92,7 +93,8 @@ app.post('/login',async(req,res)=> {
 app.post('/create',verify,async(req,res)=> {
     let title = req.body.title;
     let description = req.body.description;
-    let newTodo = new Todo({title: title, description: description});
+    let username = req.user.username;
+    let newTodo = new Todo({title: title, description: description,username: username});
     await newTodo.save();
     return res.json({message: 'New todo has been saved'});
 });
@@ -100,7 +102,8 @@ app.post('/create',verify,async(req,res)=> {
 app.post('/update',verify,async(req,res)=> {
     let title = req.body.title;
     let description = req.body.description;
-    let existingTodo = await Todo.findOne({title});
+    let username = req.user.username;
+    let existingTodo = await Todo.findOne({username,title});
     if(!existingTodo)
     {
         return res.json({message: 'Todo not found'});
@@ -112,7 +115,8 @@ app.post('/update',verify,async(req,res)=> {
 
 app.post('/delete',verify,async(req,res)=> {
     let title = req.body.title;
-    let existingTodo = await Todo.findOneAndDelete({title});
+    let username = req.user.username;
+    let existingTodo = await Todo.findOneAndDelete({title,username});
     if(!existingTodo)
     {
         return res.json({message: 'Todo not found'});
@@ -124,6 +128,14 @@ app.get('/getAll',verify,async(req,res) => {
     let data = await Todo.find({});
     return res.json(data);
 });
+
+app.get('/getByUsername',verify,async(req,res)=> {
+    let username = req.user.username;
+    console.log(username);
+    let data = await Todo.find({username: username});
+    console.log(data);
+    return res.json({data});
+})
 
 app.get('getByTitle',verify,async(req,res) => {
     let title = req.body.title;
